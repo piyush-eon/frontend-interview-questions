@@ -25,13 +25,15 @@ const Cart = ({state, dispatch}) => {
         <div style={{display:'flex', flexDirection:'column', width:'100%'}}>
          {cart.length > 0 ?
              cart.map((prod)=>(
-                 <div key={prod.title} style={{display:'flex', flexDirection:'column', padding:10, border:"1px solid grey", margin:10, gap:10}}>
-                     <img src={prod.thumbnail} alt={prod.title} style={{height:200, objectFit:'cover'}}/>
-                     <div style={{display:'flex', justifyContent:'space-between '}}>
-                        <span>{prod.title}</span>
-                        <b>$ {prod.price}</b>
+                 <div key={prod.title} style={{display:'flex', padding:10, border:"1px solid grey", margin:5, justifyContent:'space-between'}}>
+                     <div style={{display:'flex',gap:10}}>
+                      <img src={prod.thumbnail} alt={prod.title} style={{width:70, objectFit:'cover'}}/>
+                      <div style={{display:'flex', flexDirection:'column', justifyContent:'space-evenly'}}>
+                          <span>{prod.title}</span>
+                          <b>$ {prod.price}</b>
+                      </div>
                      </div>
-                     <div style={{display:'flex', gap:10}}>
+                     <div style={{display:'flex', alignItems:'center', gap:10}}>
                          <button onClick={() => changeQty(prod.id, prod.qty - 1)}>-</button>
                          <span>{prod.qty}</span>
                          <button onClick={() => changeQty(prod.id, prod.qty + 1)}>+</button>
