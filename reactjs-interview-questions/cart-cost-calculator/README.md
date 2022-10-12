@@ -1,4 +1,4 @@
-# Shopping Cart in React JS ( Machine Coding Round Question )
+# Shopping Cart in React JS ( React JS Machine Coding Round Question )
 
 ## Watch the explaination here -
 ### https://www.youtube.com/watch?v=q-ylRxSxGcY
