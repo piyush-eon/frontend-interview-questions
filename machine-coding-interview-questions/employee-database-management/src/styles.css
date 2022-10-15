@@ -1,3 +1,4 @@
+/* Initial Structural CSS - START */
 :root {
   --btn: #dbdbdb;
   --btn-hover: #cacaca;
@@ -50,6 +51,9 @@ body {
   text-align: center;
   border-bottom: 1px solid black;
 }
+/* Initial Structural CSS - END */
+
+/* Render all Employees - START */
 .employees__names--list {
   display: flex;
   flex-direction: column;
@@ -69,7 +73,9 @@ body {
 .selected {
   background-color: var(--btn);
 }
+/* Render all Employees - END */
 
+/* Render Single Employee - START */
 .employees__single--heading {
   text-align: center;
   font-size: 25px;
@@ -88,6 +94,8 @@ body {
   object-fit: contain;
   border-radius: 50%;
 }
+/* Render Single Employee - END */
+
 /* Add Employee - START */
 .addEmployee {
   display: none;
@@ -121,7 +129,8 @@ body {
   border-radius: 5px;
   border: 1px solid rgb(236, 236, 236);
 }
-/* remove arrows from input type='number' */
+
+/* removes arrows from input type='number' */
 .addEmployee_create input::-webkit-outer-spin-button,
 .addEmployee_create input::-webkit-inner-spin-button {
   -webkit-appearance: none;

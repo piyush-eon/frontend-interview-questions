@@ -42,7 +42,7 @@
     empData.imageUrl =
       empData.imageUrl || "https://cdn-icons-png.flaticon.com/512/0/93.png";
     employees.push(empData);
-    renderEmployee();
+    renderEmployees();
     addEmployeeForm.reset();
     addEmployeeModal.style.display = "none";
   });
@@ -52,7 +52,7 @@
     // Select Employee Logic - START
     if (e.target.tagName === "SPAN" && selectedEmployeeId !== e.target.id) {
       selectedEmployeeId = e.target.id;
-      renderEmployee();
+      renderEmployees();
       renderSingleEmployee();
     }
     // Select Employee Logic - END
@@ -67,12 +67,13 @@
         selectedEmployee = employees[0] || {};
         renderSingleEmployee();
       }
-      renderEmployee();
+      renderEmployees();
     }
     // Employee Delete Logic - END
   });
 
-  const renderEmployee = () => {
+  // Render All Employees Logic - START
+  const renderEmployees = () => {
     employeeList.innerHTML = "";
     employees.forEach((emp) => {
       const employee = document.createElement("span");
@@ -86,33 +87,30 @@
       employeeList.append(employee);
     });
   };
+  // Render All Employees Logic - END
 
+  // Render Single Employee Logic - START
   const renderSingleEmployee = () => {
+    // Employee Delete Logic - START
     if (selectedEmployeeId === -1) {
       employeeInfo.innerHTML = "";
       return;
     }
+    // Employee Delete Logic - END
 
     employeeInfo.innerHTML = `
       <img src="${selectedEmployee.imageUrl}" />
       <span class="employees__single--heading">
       ${selectedEmployee.firstName} ${selectedEmployee.lastName} (${selectedEmployee.age})
       </span>
-      <span class="employees__single--detail">
-          ${selectedEmployee.address}
-      </span>
-      <span class="employees__single--detail">
-      ${selectedEmployee.email}
-      </span>
-      <span class="employees__single--detail">
-          Mobile - ${selectedEmployee.contactNumber}
-      </span>
-      <span class="employees__single--detail">
-          DOB - ${selectedEmployee.dob}
-      </span>
+      <span>${selectedEmployee.address}</span>
+      <span>${selectedEmployee.email}</span>
+      <span>Mobile - ${selectedEmployee.contactNumber}</span>
+      <span>DOB - ${selectedEmployee.dob}</span>
     `;
   };
+  // Render Single Employee Logic - END
 
-  renderEmployee();
+  renderEmployees();
   if (selectedEmployee) renderSingleEmployee();
 })()
