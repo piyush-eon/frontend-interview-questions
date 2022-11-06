@@ -66,10 +66,13 @@
   }
   // Stop Interval Logic - END
 
+  // Stop Timer Button - START
   stopBtn.addEventListener("click", function () {
     stopInterval("pause");
   });
+  // Start Timer Button - END
 
+  // Reset Timer Button - START
   resetBtn.addEventListener("click", function () {
     hour.value = "";
     min.value = "";
@@ -77,4 +80,5 @@
 
     stopInterval();
   });
+  // Reset Timer Button - END
 })();
