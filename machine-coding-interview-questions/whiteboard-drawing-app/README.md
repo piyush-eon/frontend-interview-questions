@@ -1,5 +1,5 @@
 # Drawing App with Undo, Erase, Select Colors, Resize brush with Vanilla JS ( Machine Coding Interview Question )
-# ------------------------- Incomplete / Work in Progress / Coming Soon -------------------------
+# ---------- Incomplete / Work in Progress / Coming Soon ----------
 
 ### Watch the tutorial here -
 ## https://www.youtube.com/RoadsideCoder
