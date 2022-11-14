@@ -38,13 +38,16 @@ function Folder({ handleInsertNode = () => {}, explorer }) {
 
         <div style={{ display: expand ? "block" : "none", paddingLeft: 25 }}>
           {showInput.visible && (
-            <input
+            <div className="inputContainer">
+           <span>{showInput.isFolder? "📁" : "📄"}</span> 
+           <input
               type="text"
-              className="newFolderInput"
+              className="inputContainer__input"
               autoFocus
               onKeyDown={onAddFolder}
               onBlur={() => setShowInput({ ...showInput, visible: false })}
-            />
+              />
+              </div>
           )}
 
           {explorer.items.map((exp) => {

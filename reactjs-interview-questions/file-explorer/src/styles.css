@@ -9,7 +9,17 @@
   cursor: pointer;
 }
 
-.newFolderInput {
+.inputContainer{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.inputContainer>span{
+  margin-top: 5px;
+}
+
+.inputContainer__input {
   margin: 6px 0 0px 0;
   padding: 5px;
   display: flex;
