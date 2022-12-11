@@ -54,7 +54,7 @@ function Folder({ handleInsertNode = () => {}, explorer }) {
             return (
               <Folder
                 handleInsertNode={handleInsertNode}
-                key={exp.name}
+                key={exp.id}
                 explorer={exp}
               />
             );

@@ -1,0 +1,32 @@
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  list-style: none;
+  padding: 20px;
+  background-color: bisque;
+  margin: 20px 10px;
+}
+
+.pagination {
+  padding: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination > span{
+  padding: 15px 20px;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.disable{
+  opacity: 0;
+}
+
+.selected{
+  background-color: rgb(220, 220, 220);
+}
