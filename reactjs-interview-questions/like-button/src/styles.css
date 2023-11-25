@@ -1,0 +1,43 @@
+:root {
+  --default-color: #888;
+  --active-color: #f00;
+}
+
+* {
+  font-family: sans-serif;
+}
+
+.likeBtn {
+  border: 2px solid var(--default-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 32px;
+  cursor: pointer;
+  font-weight: bold;
+  height: 30px;
+  padding: 4px 8px;
+  margin-bottom: 5px;
+  color: var(--default-color);
+  background-color: #fff;
+}
+
+.likeBtn:hover {
+  border-color: var(--active-color);
+  color: var(--active-color);
+}
+
+.liked,
+.liked:hover {
+  background-color: var(--active-color);
+  border-color: var(--active-color);
+  color: #fff;
+}
+
+.likeBtn-icon {
+  display: flex;
+}
+
+.error {
+  font-size: 12px;
+}
