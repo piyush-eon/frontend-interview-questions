@@ -1,0 +1,44 @@
+.app {
+  padding: 0 20px;
+  font-family: sans-serif;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px 0;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-card a {
+  text-decoration: none;
+  color: #333;
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  max-height: 200px;
+}
+
+.breadcrumbs {
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #333;
+}
+
+.breadcrumbs span {
+  color: #999;
+}
