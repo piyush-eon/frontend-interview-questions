@@ -14,7 +14,7 @@
 
     function startInterval() {
       startBtn.style.display = "none";
-      stopBtn.style.display = "initial";
+      stopBtn.style.display = "initial"
 
       countdownTimer = setInterval(function () {
         timer();
