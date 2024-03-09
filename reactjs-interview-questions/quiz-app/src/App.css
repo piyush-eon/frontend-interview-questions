@@ -1,0 +1,73 @@
+.App {
+  font-family: poppins;
+  text-align: center;
+}
+
+.question {
+  margin: 20px auto;
+  width: 60%;
+  border: 4px solid #ddd;
+  padding: 15px 25px;
+  border-radius: 15px;
+}
+
+.question h2 {
+  margin-bottom: 10px;
+}
+
+.options {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+}
+
+.options > li > button {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* border: 1px solid grey; */
+}
+
+button:hover {
+  background-color: green;
+  color: white;
+}
+
+.results {
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.results ul {
+  list-style: none;
+  padding: 0;
+}
+
+.results span {
+  color: red;
+  font-weight: 800;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.results li {
+  margin-bottom: 10px;
+}
+
+.results li[data-correct="true"] {
+  color: green;
+}
+
+.results li[data-correct="false"] {
+  color: red;
+}
