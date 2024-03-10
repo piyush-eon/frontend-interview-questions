@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-const Result = ({userAnswers, questions, resetQuiz = () => {}}) => {
+const Result = ({ userAnswers, questions, resetQuiz = () => {} }) => {
   const correctAnswers = userAnswers.filter((answer) => answer).length;
 
   return (
