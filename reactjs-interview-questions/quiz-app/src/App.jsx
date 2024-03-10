@@ -12,10 +12,10 @@ function App() {
 
   // Keep all of the logic in App.jsx
 
-  const handleNextQuestion = (isCorrect) => {
-    setCurrentQuestion(currentQuestion + 1);
-    setActiveQuestion(currentQuestion + 1);
-    setUserAnswers([...userAnswers, isCorrect]);
+  const handleNextQuestion = (newQues) => {
+    setCurrentQuestion(parseInt(currentQuestion) + 1);
+    setActiveQuestion(parseInt(currentQuestion) + 1);
+    setUserAnswers([...userAnswers, newQues]);
   };
 
   const resetQuiz = () => {
@@ -25,8 +25,8 @@ function App() {
   };
 
   const onClickQuestion = (index) => {
-    setActiveQuestion(index);
-    setCurrentQuestion(index);
+    setActiveQuestion(parseInt(index));
+    setCurrentQuestion(parseInt(index));
   };
   return (
     <div className="App">
