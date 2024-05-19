@@ -1,0 +1,21 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: sans-serif;
+  align-items: center;
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5px;
+}
+
+.btns > button {
+  cursor: pointer;
+  width: 200px;
+  height: 80px;
+  font-size: 20px;
+  border: none;
+}
