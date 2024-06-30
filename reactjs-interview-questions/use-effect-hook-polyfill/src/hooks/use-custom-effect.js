@@ -2,7 +2,7 @@ import {useRef} from "react";
 
 const useCustomEffect = (effect, deps) => {
   const isFirstRender = useRef(true);
-  const prevDeps = useRef([]);
+  const prevDeps = useRef(deps ?? []);
 
   // First Render
   if (isFirstRender.current) {
