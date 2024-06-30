@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-const Question = ({question, onAnswerClick = () => {}}) => {
+const Question = ({ question, onAnswerClick = () => {} }) => {
   return (
     <div className="question">
       <h2>{question.question}</h2>
@@ -8,7 +8,15 @@ const Question = ({question, onAnswerClick = () => {}}) => {
         {question.answerOptions.map((option) => {
           return (
             <li key={option.text}>
-              <button onClick={() => onAnswerClick(option.isCorrect)}>
+              <button
+                onClick={() =>
+                  onAnswerClick({
+                    question: question.question,
+                    answer: option.text,
+                    isCorrect: option.isCorrect,
+                  })
+                }
+              >
                 {option.text}
               </button>
             </li>
