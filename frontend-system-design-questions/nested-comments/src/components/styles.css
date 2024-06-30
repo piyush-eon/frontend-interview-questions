@@ -1,0 +1,46 @@
+.add-comment,
+.comment-actions {
+  display: flex;
+  gap: 5px;
+  margin: 5px 0;
+}
+
+.comment-textarea {
+  width: 100%;
+  padding: 10px;
+}
+
+.comment-button {
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.comment-button:hover {
+  background-color: #0056b3;
+}
+
+.comment {
+  background-color: aliceblue;
+  padding: 10px;
+  margin: 10px;
+  border-left: 1px solid #ccc;
+  font-family: Arial, sans-serif;
+}
+
+.comment-content {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.comment-info {
+  margin: 0;
+  padding: 2px 0;
+  font-size: 12px;
+  color: #555;
+}
