@@ -36,7 +36,7 @@ button {
   /* border: 1px solid grey; */
 }
 
-button:hover {
+button:hover, .active {
   background-color: green;
   color: white;
 }
@@ -70,4 +70,8 @@ button:hover {
 
 .results li[data-correct="false"] {
   color: red;
+}
+
+.questionNumber{
+  margin: 5px 5px;
 }
