@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 
-const Result = ({userAnswers, questions, resetQuiz = () => {}}) => {
-  const correctAnswers = userAnswers.filter((answer) => answer).length;
+const Result = ({ userAnswers, questions, resetQuiz = () => {} }) => {
+  const correctAnswers = userAnswers.filter(
+    (answer) => answer.isCorrect
+  ).length;
 
   return (
     <div className="results">
@@ -13,10 +15,15 @@ const Result = ({userAnswers, questions, resetQuiz = () => {}}) => {
       <ul>
         {questions.map((question, index) => {
           return (
-            <li key={index} data-correct={userAnswers[index]}>
+            <li
+              key={index}
+              data-correct={userAnswers
+                .filter((q) => q.question === question.question)
+                .map((m) => m.isCorrect)}
+            >
               Q{index + 1}. {question.question}
               <b>
-                {userAnswers[index]
+                {userAnswers[index].isCorrect
                   ? ""
                   : `- ${
                       question.answerOptions.find((ans) => ans.isCorrect).text
